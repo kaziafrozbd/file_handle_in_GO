@@ -27,8 +27,12 @@ func main() {
 	fmt.Println(fi.Name())
 	fmt.Println(fi.Size())
 
-
-
+//create folder
+	err = os.Mkdir("fileHandleFolder", 0777)
+	if err!=nil {
+		fmt.Println(err.Error())
+	}
+	fmt.Println(err)
 
 }
 
